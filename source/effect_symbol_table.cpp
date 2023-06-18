@@ -5,7 +5,7 @@
 
 #include "effect_symbol_table.hpp"
 #include <cassert>
-#include <malloc.h> // alloca
+#include <alloca.h>
 #include <algorithm> // std::upper_bound, std::sort
 #include <functional> // std::greater
 

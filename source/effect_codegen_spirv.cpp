@@ -11,9 +11,9 @@
 #include <unordered_set>
 
 // Use the C++ variant of the SPIR-V headers
-#include <spirv.hpp>
+#include "spirv.hpp"
 namespace spv {
-#include <GLSL.std.450.h>
+#include "GLSL.std.450.h"
 }
 
 using namespace reshadefx;
