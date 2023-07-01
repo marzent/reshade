@@ -539,9 +539,9 @@ private:
 	uint32_t semantic_to_location(const std::string &semantic, uint32_t max_array_length = 1)
 	{
 		if (semantic.compare(0, 5, "COLOR") == 0)
-			return std::strtoul(semantic.c_str() + 5, nullptr, 10);
+			return (uint32_t)std::strtoul(semantic.c_str() + 5, nullptr, 10);
 		if (semantic.compare(0, 9, "SV_TARGET") == 0)
-			return std::strtoul(semantic.c_str() + 9, nullptr, 10);
+			return (uint32_t)std::strtoul(semantic.c_str() + 9, nullptr, 10);
 
 		if (const auto it = _semantic_to_location.find(semantic);
 			it != _semantic_to_location.end())
@@ -553,7 +553,7 @@ private:
 			digit_index--;
 		digit_index++;
 
-		const uint32_t base_index = std::strtoul(semantic.c_str() + digit_index, nullptr, 10);
+		const uint32_t base_index = (uint32_t)std::strtoul(semantic.c_str() + digit_index, nullptr, 10);
 		const std::string base_semantic = semantic.substr(0, digit_index);
 
 		// Now create adjoining location indices for all possible semantic indices belonging to this semantic name

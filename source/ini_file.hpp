@@ -359,5 +359,5 @@ namespace reshade
 	/// <summary>
 	/// Global configuration that can be used for general settings that are not specific to an effect runtime instance.
 	/// </summary>
-	ini_file &global_config();
+	//ini_file &global_config();
 }
